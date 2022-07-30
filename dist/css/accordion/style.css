@@ -1,0 +1,118 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+/* style */
+.a-container {
+    width: 80%;
+    margin: 1vw auto;
+}
+
+.a-container label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 1.5vw 1vw;
+    color: #fff;
+    background-color: #707070;
+    border-bottom: 1px solid #white;
+
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.a-container label:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid #fff;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 6px solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+}
+
+.a-container input:checked + label,
+.a-container label:hover {
+    background-color: #313131;
+    color: #ffa;
+}
+
+
+.a-container input:checked + label:after {
+    border-top: 8px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-left: 6px solid transparent;
+    top: 6px;
+}
+
+.a-content {
+    padding: 1vw 2vw;
+    display: none;
+    background-color: white;
+
+}
+
+.a-content p {
+    color: #707070;
+    font-size: 18px;
+    margin: 1vh 0vw 1vw 1vw;
+}
+
+.a-content h2 {
+    color: #707070;
+    font-size: 25px;
+    margin: 1vh 0 1vh 0;
+}
+
+.a-container input:checked ~ .a-content {
+    display: block;
+}
+
+.a-content-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .a-content-text {
+        display: block;
+
+    }
+    .a-content p{
+        font-size: 15px;
+    }
+}
+
+.wrapperAcc {
+    /*margin: auto;*/
+    /*max-width: 400px;*/
+    width: 100%;
+
+}
+
+.wrapperAcc img {
+    width: 100%;
+    height: auto;
+    padding: 1vw 1vw 0 1vw;
+    /*margin: 2vw auto;*/
+    /* height: 27vw; */
+    /*max-width: 300px;*/
+    /*max-height: 17vw;*/
+}
